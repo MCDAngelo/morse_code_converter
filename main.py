@@ -5,10 +5,10 @@ def translate(s):
     return translated
 
 def run_translator():
-    input_word = input("What word do you wish to convert to Morse Code?\n")
+    input_word = input("What word do you wish to convert to Morse Code?\n> ")
     translated_word = translate(input_word)
-    print(f"In Morse Code, the word {input_word} is:\n {translated_word}")
-    go_again = input("Do you want to convert another word? y or n\n")
+    print(f"In Morse Code, `{input_word}` is:\n {" ".join(translated_word)}")
+    go_again = input("Do you want to convert another word? y or n\n> ")
     if go_again == "y":
         run_translator()
 
